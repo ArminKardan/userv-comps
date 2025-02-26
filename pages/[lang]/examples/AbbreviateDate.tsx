@@ -27,7 +27,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
           <f-12>اکنون با ثانیه:
             <sp-3 />
             <span style={{ color: "#157B1C" }}>
-              {AbbreviateDate(new Date(), z, { includsec: true })}
+              {AbbreviateDate(new Date(), z, {includsec:true })}
             </span>
           </f-12>
 
@@ -72,13 +72,6 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
             </span>
           </f-12>
 
-
-          <f-12> ۱ روز بعد:
-            <sp-3 />
-            <span style={{ color: "#157B1C" }}>
-              {AbbreviateDate(new Date(new Date().getTime() + 86400000 * 1), z,)}
-            </span>
-          </f-12>
         </w-x>
         
         
