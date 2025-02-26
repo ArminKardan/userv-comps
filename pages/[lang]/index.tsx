@@ -97,7 +97,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
       props.form = null
       refresh()
     }} titletextcolor='#621C14' titlebgcolor='#648E6A' contentbgcolor='#BFC3D9'
-     contentStyle={{ padding: 20 }} >
+      contentStyle={{ padding: 20 }} >
       {Lorem}
     </WindowFloat> : null}
 
@@ -106,8 +106,8 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
     <Window title="کامپوننت های کیو ای">
 
       <br-xx />
-      <b-200 style={{ backgroundColor: "#748EC5", fontSize: 12 }} 
-      onClick={() => { alerter(SerialGenerator(30)) }}>
+      <b-200 style={{ backgroundColor: "#748EC5", fontSize: 12 }}
+        onClick={() => { alerter(SerialGenerator(30)) }}>
         تولید سریال / پسورد تصادفی
       </b-200>
 
@@ -115,7 +115,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
       <br-xx />
       <b-200 style={{ backgroundColor: "#748EC5" }} onClick={() => {
-        alerter("my title", "my body", { backgroundColor: "#4C772FC2", padding: 10, borderRadius: 5, minHeight: 200}, 
+        alerter("my title", "my body", { backgroundColor: "#4C772FC2", padding: 10, borderRadius: 5, minHeight: 200 },
           cdn("/files/qecircular.webp"))
       }}>
         هشدار سفارشی شده (رنگ)
@@ -192,8 +192,8 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
       <b-200 style={{ backgroundColor: "#748EC5" }}>
         شمارنده معکوس
         <sp-2 />
-        <CountDown expdate={new Date(new Date().getTime() + 30000)} 
-        onexpire={() => { console.log("expired!") }} />
+        <CountDown expdate={new Date(new Date().getTime() + 30000)}
+          onexpire={() => { console.log("expired!") }} />
       </b-200>
 
       <br-xx />
@@ -383,7 +383,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
       <br-x />
       <b-200 style={{ backgroundColor: "#748EC5" }} onClick={async () => {
-        log({ text: "Progress started...", type: "error"})
+        log({ text: "Progress started...", type: "error" })
         await sleep(2000)
         log({ text: "Loading AI model...", type: "warning" })
         await sleep(1000)
@@ -431,10 +431,10 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
       <br-xx />
       <Window title="پروگرس سیرکولار" contentbgcolor='#C8D3A4' contentStyle={{ padding: 15 }}>
         <w-cse style={{ gap: 10 }}>
-          <Circle percent={58} width={50} /> 
-          <Circle percent={58} width={50} /> 
-          <Circle percent={100} width={30} /> 
-          <Circle percent={58} width={30} /> 
+          <Circle percent={58} width={50} />
+          <Circle percent={58} width={50} />
+          <Circle percent={100} width={30} />
+          <Circle percent={58} width={30} />
         </w-cse>
       </Window>
 
@@ -442,10 +442,11 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
       <Window title='آیتم های وی'>
         <w-cc style={{ gap: 10, padding: 20 }}>
-          <VItem image={cdn("/files/app/node.webp")} title={"نود جی اس"} selected on={() => { alerter("شما آیتم نود جی اس را انتخاب کردید") }} />
+          <VItem image={cdn("/files/app/node.webp")} title={"نود جی اس"} selected
+            on={() => { alerter("شما آیتم نود جی اس را انتخاب کردید") }} />
           <VItem image={cdn("/files/app/reload.webp")} title={"ریلود"} on={() => { alerter("شما ریلود را انتخاب کردید") }} />
           <VItem image={cdn("/files/app/plug.webp")} title={"پلاگ"} />
-          <VItem image={cdn("/files/app/start.webp")} title={"استارت"} bold icon2={cdn("/files/ok.svg")}  />
+          <VItem image={cdn("/files/app/start.webp")} title={"استارت"} bold icon2={cdn("/files/ok.svg")} />
           <VItem image={cdn("/files/app/sender2.webp")} title={"ارسال"} />
           <VItem image={cdn("/files/app/workers.webp")} title={"ورکرها"} />
           <VItem image={cdn("/files/app/translate.webp")} title={"ترجمه"} />
@@ -457,7 +458,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
         <f-cse>
           <c-cc>
-            <StarRating stars={props.stars1 || 0} on={(num) => { refresh({ stars1: num }) }} id='star_test1' />
+            <StarRating stars={props.stars1 || 0} on={(num) => { props.stars1 = num; refresh() }} id='star_test1' />
             <StarRating stars={props.stars1 || 0} on={(num) => { refresh({ stars1: num }) }} id='star_test2' width={20} />
             <StarRating stars={props.stars1 || 0} on={(num) => { refresh({ stars1: num }) }} id='star_test3' width={15} />
           </c-cc>
@@ -491,6 +492,8 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
           special={"special"}
           specialcolor={"green"} />
       </OpeningTitle>
+
+      
       <OpeningDetail open={props.opendetail} name='service' id={"test"} >
         <div style={{ backgroundColor: "#80B07D" }}>{Lorem}</div>
       </OpeningDetail>
@@ -530,7 +533,8 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
 
       <br-xx />
-      <Icon3Titles title1={"عنوان اول"}
+      <Icon3Titles
+        title1={"عنوان اول"}
         title2={<f-12 style={{ marginTop: 5 }}>عنوان دوم</f-12>}
         title3={"عنوان سوم"}
         icon={cdn("/files/app/qedesk.webp")}
@@ -555,7 +559,9 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
       <br-xx />
       <Window title='تکست باکس قیمت' contentStyle={{ minHeight: 100, padding: 10 }}>
-        <PriceTextBox fractions={0} title='لطفا مبلغ مورد نظر را وارد کنید' defaultValue='2000' unit='تومان' />
+        <PriceTextBox fractions={1} title='لطفا مبلغ مورد نظر را وارد کنید' defaultValue={"100.26"} unit='تومان'
+         on={()=>{}} explainstr='مراقب باشید' explain={"مراقبت"} readOnly lefticon={cdn("/files/ok.svg")} onlefticon={()=>{}}
+         righttext={"hiiii"} />
       </Window>
 
 
