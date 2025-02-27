@@ -107,6 +107,13 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
       <br-xx />
       <b-200 style={{ backgroundColor: "#748EC5", fontSize: 12 }}
+        onClick={() => { Router.push(z.root + "/examples/customtags") }}>
+        مثال از تگهای سفارشی
+      </b-200>
+
+
+      <br-xx />
+      <b-200 style={{ backgroundColor: "#748EC5", fontSize: 12 }}
         onClick={() => { alerter(SerialGenerator(30)) }}>
         تولید سریال / پسورد تصادفی
       </b-200>
@@ -493,7 +500,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
           specialcolor={"green"} />
       </OpeningTitle>
 
-      
+
       <OpeningDetail open={props.opendetail} name='service' id={"test"} >
         <div style={{ backgroundColor: "#80B07D" }}>{Lorem}</div>
       </OpeningDetail>
@@ -560,8 +567,8 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
       <br-xx />
       <Window title='تکست باکس قیمت' contentStyle={{ minHeight: 100, padding: 10 }}>
         <PriceTextBox fractions={1} title='لطفا مبلغ مورد نظر را وارد کنید' defaultValue={"100.26"} unit='تومان'
-         on={()=>{}} explainstr='مراقب باشید' explain={"مراقبت"} readOnly lefticon={cdn("/files/ok.svg")} onlefticon={()=>{}}
-         righttext={"hiiii"} />
+          on={() => { }} explainstr='مراقب باشید' explain={"مراقبت"} readOnly lefticon={cdn("/files/ok.svg")} onlefticon={() => { }}
+          righttext={"hiiii"} />
       </Window>
 
 

@@ -273,7 +273,7 @@ export const DeclarationsBefore = (props, z) => {
 export const APILister = (props) => {
   let apistored = localStorage.getItem("apilist")
 
-  setCookie("pageid", props.pageid, { sameSite: "lax", maxAge: 365 * 24 * 3600000, partitioned:true })
+  setCookie("pageid", props.pageid, { sameSite: "lax", maxAge: 365 * 24 * 3600000, partitioned:true, secure:true })
 
   if (props.apilist?.length > 0) {
     // console.log("Refreshing apis from server...")
