@@ -13,7 +13,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
     <Window title="تگ های سفارشی">
       <div style={{
-        width: 300, height: 200, backgroundColor: "pink",
+        width: "100%", height: 200, backgroundColor: "pink",
 
         display: "flex", //horizontal
         justifyContent:"flex-start", //main-axis

@@ -531,7 +531,39 @@ c-ese {
   flex-direction: column;
 }
 
+w-x,
+w-xs,
+w-xe,
+w-xc,
+w-xsb,
+w-xse,
+w-xse,
 
+w-c,
+w-cs,
+w-ce,
+w-cc,
+w-csb,
+w-cse,
+w-cse,
+
+w-s,
+w-ss,
+w-se,
+w-sc,
+w-ssb,
+w-sse,
+w-sse,
+
+w-e,
+w-es,
+w-ee,
+w-ec,
+w-esb,
+w-ese,
+w-ese {
+  flex-wrap: wrap;
+}
 
 
 
