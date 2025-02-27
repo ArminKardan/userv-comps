@@ -12,17 +12,63 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
 
     <Window title="تگ های سفارشی">
-      <div style={{
-        width: "100%", height: 200, backgroundColor: "pink",
 
-        display: "flex", //horizontal
-        justifyContent:"flex-start", //main-axis
-        alignItems:"flex-start"  //cross axis
+      {/* <div style={{width:"100%", height:300, backgroundColor:"pink",
+        display:"flex",
+        flexDirection:"row",
+        
+        alignItems:"stretch", //cross-axis (stretch, flex-start, flex-end, center)
+        justifyContent:"space-evenly" //main-axis (flex-start, flex-end, center, space-between, space-around, space-evenly)
+
       }}>
-        <div style={{backgroundColor: "green" }}>OOOO</div>
-        <div style={{ backgroundColor: "red" }}>OOOO</div>
-        <div style={{ backgroundColor: "blue" }}>OOOO</div>
-      </div>
+        <div style={{backgroundColor:"red"}}>OOOOO</div>
+        <div style={{backgroundColor:"green"}}>OOOOO</div>
+        <div style={{backgroundColor:"blue"}}>OOOOO</div>
+      </div> */}
+
+
+        {/* FLEX فلکس و چیدمان
+        B-NUM دکمه
+        SP-NUM (SP-X) فاصله افقی
+        BR-NUM (BR-X) فاصله عمودی
+        F-NUM فونت سایز */}
+
+      <f-cc>
+        <f-5>hiii</f-5>
+        <sp-x /><sp-xx /><sp-xxx />
+        <f-40>bye</f-40>
+      </f-cc>
+
+      <c-cc>
+        hiiii
+        <br-1 />
+        <br-x />
+        <br-2 />
+        <br-xx />
+        <br-xxx />
+        <br-xxxx />
+        byeee
+      </c-cc>
+
+      <w-sc style={{ padding: 5, gap: 5 }}>
+        <b-300 style={{ backgroundColor: "#91B193" }}>hiiii</b-300>
+        <b-300 style={{ backgroundColor: "#91B193" }}>hiiii</b-300>
+        <b-300 style={{ backgroundColor: "#91B193" }}>hiiii</b-300>
+        <b-300 style={{ backgroundColor: "#91B193" }}>hiiii</b-300>
+      </w-sc>
+
+      <w-xc style={{
+        width: "100%", backgroundColor: "pink",
+        rowGap: 30, columnGap: 10, padding: 10,
+      }}>
+        <f-cc style={{ height: 100, width: 100, minWidth: 100, backgroundColor: "red", borderRadius: 50 }}>OOOOO</f-cc>
+        <f-cc style={{ height: 100, width: 100, minWidth: 100, backgroundColor: "red", borderRadius: 50 }}>OOOOO</f-cc>
+        <f-cc style={{ height: 100, width: 100, minWidth: 100, backgroundColor: "red", borderRadius: 50 }}>OOOOO</f-cc>
+        <f-cc style={{ height: 100, width: 100, minWidth: 100, backgroundColor: "red", borderRadius: 50 }}>OOOOO</f-cc>
+        <f-cc style={{ height: 100, width: 100, minWidth: 100, backgroundColor: "red", borderRadius: 50 }}>OOOOO</f-cc>
+        <f-cc style={{ height: 100, width: 100, minWidth: 100, backgroundColor: "red", borderRadius: 50 }}>OOOOO</f-cc>
+        <f-cc style={{ height: 100, width: 100, minWidth: 100, backgroundColor: "red", borderRadius: 50 }}>OOOOO</f-cc>
+      </w-xc>
 
     </Window>
 
